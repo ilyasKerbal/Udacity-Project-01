@@ -10,7 +10,7 @@
         android:paddingTop="@dimen/fragment_vertical_margin"
         android:paddingRight="@dimen/fragment_horizontal_margin"
         android:paddingBottom="@dimen/fragment_vertical_margin"
-        tools:context=".login.ui.login.LoginFragment">
+        tools:context="com.udacity.shoestore.login.LoginFragment">
 
         <EditText
             android:id="@+id/username"
@@ -46,13 +46,17 @@
             android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
+            android:layout_gravity="center"
             android:layout_marginStart="48dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="48dp"
             android:layout_marginBottom="64dp"
-            android:enabled="false"
+            android:paddingStart="@dimen/fragment_vertical_margin"
+            android:paddingEnd="@dimen/fragment_vertical_margin"
             android:text="@string/action_sign_in"
+            android:background="@color/colorAccent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunito_sans_bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

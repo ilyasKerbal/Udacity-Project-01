@@ -9,6 +9,33 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <string name="onboarding_title">Welcome to Our App</string>
+    <string name="onboarding_text">\nWelcome to our shoe shopping app.
+\n\nThis App is made for the Audacity Nanodegree.
+\n\nYou can add shoes to your cart and checkout later.
+\n\nAll major payment providers are accepted.
+\n\nAll the shoes on app are customizable.
+\n\nOur support is available 24/7.
+    </string>
+    <string name="onboarding_exit">Go to instruction</string>
+    <string name="instruction_title">Instructions</string>
+    <string name="instruction_text">\nHere are the list of instruction:
+\n\n1. Read the instructions
+\n\n2. Add shoes to your list.
+\n\n3. Enjoy the app.
+\n\n4. Press the button bellow.
+    </string>
+    <string name="instruction_exit">Go Shoe Shopping</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="list_of_shoes">List of Shoes</string>
+    <string name="add_new_show">Add Shoe</string>
+    <string name="shoe_details">Shoe Details</string>
+    <string name="save_shoe">Save Shoe</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="name_hint">XRunner...</string>
+    <string name="company_hint">Adidas</string>
+    <string name="size_hint">9</string>
+    <string name="description_hint">Shoe description here...</string>
 </resources>
