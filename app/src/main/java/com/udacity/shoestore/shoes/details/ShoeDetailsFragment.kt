@@ -29,7 +29,7 @@ class ShoeDetailsFragment : Fragment() {
         }
         
         viewModel = ViewModelProvider(requireActivity()).get(ActivityViewModel::class.java)
-        binding.activityViewModel = viewModel
+        binding.shoe = viewModel.randomShoe.value
         binding.setLifecycleOwner(this)
         binding.save.setOnClickListener {
             try {

@@ -5,8 +5,8 @@
 
     <data>
         <variable
-            name="activityViewModel"
-            type="com.udacity.shoestore.ActivityViewModel" />
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
     </data>
     <!--
     Position the title and the scrollView relative to each
@@ -56,7 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:text="@{activityViewModel.randomShoe.name}"
+                    android:text="@={shoe.name}"
                     android:inputType="textPersonName"
                     android:hint="@string/name_hint" />
 
@@ -70,7 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:text="@{activityViewModel.randomShoe.company}"
+                    android:text="@={shoe.company}"
                     android:inputType="textPersonName"
                     android:hint="@string/company_hint" />
 
@@ -84,7 +84,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:text="@{String.valueOf(activityViewModel.randomShoe.size)}"
+                    android:text="@{String.valueOf(shoe.size)}"
                     android:hint="@string/size_hint"
                     android:inputType="numberDecimal" />
 
@@ -98,7 +98,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:text="@{activityViewModel.randomShoe.description}"
+                    android:text="@={shoe.description}"
                     android:inputType="textPersonName"
                     android:hint="@string/description_hint" />
                 <!-- Horizontal layout to organize the buttons -->
