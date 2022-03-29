@@ -2,6 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+           Instead of using the <fragment> taught in the nanodegree,
+           I used FragmentContainerView, as recommended by the IDE.
+           There are some minor changes when handling navigation.
+   -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container"
         android:layout_width="match_parent"

@@ -2,6 +2,16 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="activityViewModel"
+            type="com.udacity.shoestore.ActivityViewModel" />
+    </data>
+    <!--
+    Position the title and the scrollView relative to each
+    other and their parent
+    -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,7 +29,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
+        <!-- The container for our form fields-->
         <ScrollView
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/details_title"
@@ -27,6 +37,7 @@
             app:layout_constraintStart_toEndOf="parent"
             android:layout_width="0dp"
             android:layout_height="wrap_content">
+            <!-- Vertical linear layout to hold the fields-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,6 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:text="@{activityViewModel.randomShoe.name}"
                     android:inputType="textPersonName"
                     android:hint="@string/name_hint" />
 
@@ -58,6 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:text="@{activityViewModel.randomShoe.company}"
                     android:inputType="textPersonName"
                     android:hint="@string/company_hint" />
 
@@ -71,6 +84,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:text="@{String.valueOf(activityViewModel.randomShoe.size)}"
                     android:hint="@string/size_hint"
                     android:inputType="numberDecimal" />
 
@@ -84,9 +98,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:text="@{activityViewModel.randomShoe.description}"
                     android:inputType="textPersonName"
                     android:hint="@string/description_hint" />
-
+                <!-- Horizontal layout to organize the buttons -->
                 <LinearLayout
                     android:layout_marginTop="32dp"
                     android:orientation="horizontal"

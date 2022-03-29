@@ -21,6 +21,11 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
+        <!--
+            Instead of using the <fragment> taught in the nanodegree,
+            I used FragmentContainerView, as recommended by the IDE.
+            There are some minor changes when handling navigation.
+        -->
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/nav_host_fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"

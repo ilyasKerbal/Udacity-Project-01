@@ -26,19 +26,24 @@ class ShoeListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val binding : ShoeListLayoutBinding = DataBindingUtil.inflate(inflater, R.layout.shoe_list_layout, container, false)
         setHasOptionsMenu(true)
+
+        viewModel = ViewModelProvider(requireActivity()).get(ActivityViewModel::class.java)
+
         binding.floatingActionButton.setOnClickListener {
+            viewModel.generateRandom()
             findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailsFragment())
         }
-        viewModel = ViewModelProvider(requireActivity()).get(ActivityViewModel::class.java)
+
         val shoeListArgs by navArgs<ShoeListFragmentArgs>()
         viewModel.listOfShoes.observe(viewLifecycleOwner, Observer { newList ->
             if (shoeListArgs.addedToList) {
                 Timber.i("New Shoe object received: ${newList.last().toString()}")
             }
             newList.forEach {
-                val showView = createViewFromShoe(newList.last())
+                val showView = createViewFromShoe(it)
                 binding.shoeListContainer.addView(showView)
             }
 
