@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
         /*
          *  This is different from the nanodegree materials,
          * because we are using the androidx.fragment.app.FragmentContainerView
+         * https://developer.android.com/guide/fragments/fragmentmanager
+         * https://stackoverflow.com/questions/58703451/fragmentcontainerview-as-navhostfragment
          * */
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
