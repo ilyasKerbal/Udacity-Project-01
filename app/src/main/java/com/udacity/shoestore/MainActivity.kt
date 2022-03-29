@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         // I want to remove the toolbar when we are in the login, instruction, and onBoarding fragments
+        // We will set this listener as we did in the Trivia project
         navController.addOnDestinationChangedListener { nc: NavController, nd: NavDestination, args: Bundle? ->
             if (nd.id in listOf<Int>(R.id.loginFragment, R.id.instructionFragment, R.id.onboardingFragment)){
                 toolbar.visibility = View.GONE
