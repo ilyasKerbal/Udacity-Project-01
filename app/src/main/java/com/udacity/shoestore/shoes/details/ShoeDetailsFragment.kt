@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.databinding.adapters.Converters
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.ActivityViewModel
@@ -33,12 +34,12 @@ class ShoeDetailsFragment : Fragment() {
         binding.setLifecycleOwner(this)
         binding.save.setOnClickListener {
             try {
-                val shoe_name : String = binding.shoeName.text.toString()
-                val shoe_company : String = binding.shoeCompany.text.toString()
-                val shoe_size : Double = binding.shoeSize.text.toString().toDouble()
-                val shoe_description = binding.shoeDescription.text.toString()
+                val shoe_name : String = binding?.shoe?.name ?: ""
+                val shoe_company : String = binding?.shoe?.company ?: ""
+                val shoe_size : Double = binding?.shoe?.size ?: Double.NaN
+                val shoe_description = binding?.shoe?.description ?: ""
                 if (shoe_name.isNotBlank() && shoe_company.isNotBlank() && !shoe_size.isNaN() && shoe_description.isNotBlank()){
-                    viewModel.insertNew(Shoe(shoe_name, shoe_size, shoe_company, shoe_description))
+                    binding?.shoe?.copy()?.let { it1 -> viewModel.insertNew(it1) }
                     findNavController().navigate(ShoeDetailsFragmentDirections.actionShoeDetailsFragmentToShoeListFragment(true))
                 } else {
                     Toast.makeText(requireContext(), "Invalid Input", Toast.LENGTH_SHORT).show()

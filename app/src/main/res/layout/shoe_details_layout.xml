@@ -84,7 +84,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:text="@{String.valueOf(shoe.size)}"
+                    android:text="@={``+shoe.size}"
                     android:hint="@string/size_hint"
                     android:inputType="numberDecimal" />
 
