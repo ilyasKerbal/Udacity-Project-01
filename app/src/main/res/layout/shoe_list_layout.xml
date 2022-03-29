@@ -44,6 +44,8 @@
 
                 <LinearLayout
                     android:id="@+id/shoe_list_container"
+                    android:divider="@drawable/divider"
+                    android:showDividers="middle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
